@@ -1,0 +1,93 @@
+//Read a single digit number and write the number in word using Case
+let num = Math.floor(Math.random() * 10) ;
+console.log("Random Single digit number is:" + num);
+switch (num) {
+    case 0:
+        text = "zero";
+        break;
+    case 1:
+        text = "one";
+        break;
+    case 2:
+        text = "two";
+        break;    
+    case 3:
+        text = "three";
+        break;
+    case 4:
+        text = "four";
+        break;
+    case 5:
+        text = "five";
+        break;  
+    case 6:
+        text = "six";
+        break;
+    case 7:
+        text = "seven";
+        break;    
+    case 8:
+        text = "eight";
+        break;
+    case 9:
+        text = "nine";
+        break;       
+}
+console.log("the digit "+num+" is "+text+" in words")
+
+//Read a Number and Display the week day (Sunday, Monday,...)
+let day = Math.floor(Math.random() * 10) %7 +1 ;
+console.log("Day number is:" + day);
+switch (day) {
+   
+    case 1:
+        text = "Monday";
+        break;
+    case 2:
+        text = "tuesday";
+        break;    
+    case 3:
+        text = "wednesday";
+        break;
+    case 4:
+        text = "thursday";
+        break; 
+    case 5:
+        text = "friday";
+        break;
+    case 6:
+        text = "saturday";
+        break;    
+    case 7:
+        text = "sunday";
+        break;        
+}
+console.log("the day number "+num+" is "+text+" in words")
+
+//Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
+let r1 = require('readline');
+let prompts = r1.createInterface(process.stdin, process.stdout);
+prompts.question("enter value in unit format 1,10,100,1000 etc  : ", function (value) {
+    let text = "";
+    switch (value) {
+        case 1:
+          text = "unit";
+        break;
+        case 2:
+          text = "ten";
+        break;    
+        case 3:
+          text = "hundred";
+        break;
+        case 4:
+          text = "thousand";
+        break; 
+        default:
+          text = "oops! try again";
+        break;
+          
+    }
+    console.log("the number "+value+" is "+text+" in words");
+process.exit();
+}); 
+
